@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    overflow: hidden;
+    margin: 0;
+    background-color: black;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+}
+
+.slide {
+    height: 75vh;
+    width: 450px;
+    border-radius: 20px;
+    margin: 10px auto;
+    cursor: pointer;
+    color: black;
+    flex: 0.26;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+.slide h3 {
+    position: absolute;
+    font-size: 35px;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.slide.active {
+    flex: 6;
+}
+
+.slide.active h3 {
+    opacity: 1;
+    transition: opacity 0.2s ease-in 0.4s;
+}
+
+.header {
+  position: relative;
+  margin: 5px 8px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  width: 629;
+  height: 90;
+  border-radius: 17px;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.footer {
+  position: relative;
+  left: 25%;
+  bottom: 0;
+  width: 629px;
+  height: 48px;
+  border-radius: 17px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+button{
+  position: absolute;
+  margin: 50%;
+  border: 0;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+
+.active {
+  background-color: #04AA6D;
+  margin: auto 10px;
+}
