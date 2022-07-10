@@ -7,7 +7,6 @@ for (const slide of slides){
     slide.addEventListener('click', () => {
         clearActive()
         slide.classList.add('active')
-        slide.classList.add('not-active')
         slide.innerHTML += "<button type='button'>X</button>"
     }
     )
