@@ -21,7 +21,7 @@ body {
 }
 
 .slide {
-    height: 75vh;
+    height: 80vh;
     width: 450px;
     border-radius: 20px;
     margin: 10px auto;
@@ -55,7 +55,10 @@ body {
 
 .header {
   position: relative;
-  margin: 5px 8px;
+  margin: -10px 8px;
+  padding-bottom: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 ul {
@@ -82,7 +85,7 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 25px 16px;
   text-decoration: none;
 }
 
@@ -92,7 +95,7 @@ li a:hover:not(.active) {
 
 .footer {
   position: relative;
-  left: 25%;
+  margin: 40px auto;
   bottom: 0;
   width: 629px;
   height: 48px;
@@ -104,7 +107,7 @@ li a:hover:not(.active) {
 
 button{
   position: absolute;
-  margin: 50%;
+  margin: 35% 50%;
   border: 0;
   border-radius: 50%;
   height: 45px;
@@ -114,4 +117,8 @@ button{
 .active {
   background-color: #04AA6D;
   margin: auto 10px;
+}
+
+.not-active {
+  margin: 10px 10px;
 }
