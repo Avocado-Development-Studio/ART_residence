@@ -93,6 +93,7 @@ body {
     opacity: 1;
 }
 
+
 .slide.active h3 {
     opacity: 2;
     transition: opacity 0.2s ease-in 0.4s;
@@ -202,4 +203,9 @@ i::after {
   background-color: #333;
   color: white;
   text-align: center;
+}
+
+/*Добавил чисто для теста , можешь удалить*/ 
+h3.not-active {
+  display: none;
 }
