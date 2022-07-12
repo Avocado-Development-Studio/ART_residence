@@ -34,12 +34,32 @@ body {
 
 }
 
-#head1 {
-  
+#headr {
+  transform: rotate(0deg);
+  margin: 0;
+}
+
+#head1.active {
+  transform: rotate(0deg);
+  background-color: #04aa6d00;
+}
+
+#head1.not-active {
+  transform: rotate(-90deg);
+  margin: 23% 92% 10% 0%;
 }
 
 #head2 {
+  transform: rotate(0deg);
+}
 
+#head2.active {
+  transform: rotate(0deg);
+}
+
+#head2.not-active {
+  margin: 3% 5% 29% 0%;
+  transform: rotate(90deg);
 }
 
 #head3 {
@@ -156,7 +176,7 @@ i::after {
 
 #btn1 {
   position: absolute;
-  margin: 37% 40%;
+  margin: 37% 37%;
   z-index: 2;
 }
 
