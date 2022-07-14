@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@1,800&display=swap');
 
 * {
     box-sizing: border-box;
@@ -8,79 +9,150 @@
 
 .header {
   position: relative;
-  margin: 2px 8px;
+  margin: 6px 8px;
   padding-bottom: 12px;
   padding-left: 8px;
   padding-right: 8px;
 }
 
+#icon {
+  height: 68px;
+  margin-left: 1%;
+  z-index: 2;
+}
+
+#icon_txt {
+  position: absolute;
+  margin: -3.1% 5%;
+  margin-bottom: -3%;
+  font-size: 30px;
+  font-family: 'Spectral SC', serif;
+  color: #fff;
+  z-index: 2;
+}
+
 body {
-    font-family: 'Russo+One';
+    background-image: url("https://a.d-cd.net/ecd8d36s-1920.jpg");
+    background-repeat: no-repeat;
+    font-family: 'Russo One', sans-serif;
     overflow: hidden;
     margin: 0;
     background-color: black;
+    width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
 .container {
+    position: relative;
     width: 100%;
     display: flex;
-    padding: 0 20px;
+    margin: auto;
 }
 
 .people {
 
 }
 
-#headr {
+.headr {
   transform: rotate(0deg);
   margin: 0;
+  bottom: -1px;
+  left: 6px;
 }
 
 #head1.active {
+  width: 314px;
+  bottom: -17px;
   transform: rotate(0deg);
   background-color: #04aa6d00;
 }
 
 #head1.not-active {
+  left: -161px;
+  bottom: 20px;
+  height: 0px;
+  width: 334px;
   transform: rotate(-90deg);
-  margin: 23% 92% 10% 0%;
-}
-
-#head2 {
-  transform: rotate(0deg);
+  margin: 54% 65% -61% 0%;
+  display: block;
 }
 
 #head2.active {
+  width: 160px;
+  bottom: -18px;
+  background-color: #04aa6d00;
   transform: rotate(0deg);
 }
 
 #head2.not-active {
-  margin: 3% 5% 29% 0%;
+  left: 48px;
+  bottom: -1px;
+  width: 160px;
+  margin: 42% 5% -78% 0%;
   transform: rotate(90deg);
+  display: block;
 }
 
-#head3 {
-
+#head3.active {
+  width: 0;
+  bottom: -17px;
+  background-color: #04aa6d00;
 }
 
+#head3.not-active {
+  height: 0;
+  left: 16px;
+  margin: 96% -80% -97% 0%;
+  transform: rotate(90deg);
+  display: block;
+}
 
 .slide {
+    left: 4%;
     height: 80vh;
-    width: 450px;
     border-radius: 20px;
-    margin: 10px auto;
+    margin: auto 10px;
     cursor: pointer;
     color: black;
-    flex: 0.26;
+    flex: .3;
     background-image: url(Image/bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    transition: all 500ms ease-in-out;
+    transition: all 1600ms ease-in-out;
+}
+
+.slide.active {
+    margin: 10px 0;
+    flex: .92;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.slide.not-active {
+  margin: auto 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#slide3.not-active {
+  width: 334px;
+  height: 771px;
+}
+
+.slide.hide {
+  display: none;
+  transition: all 1000ms ease-in-out;
+}
+
+.slide.not-hide {
+  display: block;
+  transition: all 1000ms ease-in-out;
 }
 
 .slide h3 {
@@ -96,36 +168,26 @@ body {
 
 .slide.active h3 {
     opacity: 2;
-    transition: opacity 0.2s ease-in 0.4s;
+    transition: opacity .2s ease-in .4s;
 }
 
-.slide.active {
-    flex: 6;
-}
-
-.active {
-  background-color: #04AA6D;
-  margin: auto 10px;
-}
-
-.not-active {
-  margin: 10px 10px;
+marker {
+  display: none;
 }
 
 ul {
-  list-style-type: none;
+  background: rgba(51, 51, 51, 0.3);
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  list-style-type: none;
   width: 629;
   height: 90;
   border-radius: 17px;
 }
 
 li {
-  float: left;
-  border-right:1px solid #bbb;
+  float: right;
 }
 
 li:last-child {
@@ -133,6 +195,7 @@ li:last-child {
 }
 
 li a {
+  font-family: 'Spectral SC', serif;
   display: block;
   color: white;
   text-align: center;
@@ -140,8 +203,8 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
-  background-color: #111;
+li:hover > a{
+  color: #f8b600;
 }
 
 i{
@@ -177,7 +240,7 @@ i::after {
 
 #btn1 {
   position: absolute;
-  margin: 37% 37%;
+  margin: 37% 43%;
   z-index: 2;
 }
 
@@ -193,19 +256,20 @@ i::after {
   z-index: 2;
 }
 
+#foot_txt {
+  font-family: 'Spectral SC', serif;
+  position: absolute;
+  margin: 0% 32% 0% 30%;
+}
+
 .footer {
+  background-color: rgba(51, 51, 51, .7);
   position: relative;
-  margin: 39px auto;
-  bottom: 0;
+  margin: 25px auto;
   width: 629px;
   height: 48px;
   border-radius: 17px;
-  background-color: #333;
+  /*background-color: #333;*/
   color: white;
   text-align: center;
-}
-
-/*Добавил чисто для теста , можешь удалить*/ 
-h3.not-active {
-  display: none;
 }
